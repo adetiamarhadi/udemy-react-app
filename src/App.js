@@ -1,7 +1,7 @@
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
 
-function App() {
+const App = () => {
 
   const expenses = [
     { id: '1', title: 'Kopi Kenangan - Kopi Kenangan Mantan', amount: 18000, date: new Date(2021, 6, 2) },
