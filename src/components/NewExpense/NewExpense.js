@@ -10,21 +10,22 @@ const NewExpense = (props) => {
             id: Math.random().toString()
         };
         props.onAddExpense(expenseData);
+        changeToggle();
     };
 
-    const [toggle, setToggle] = useState('hide');
+    const [isVisible, setVisible] = useState(false);
 
     const changeToggle = () => {
-        if (toggle === 'hide') {
-            setToggle('show');
+        if (isVisible) {
+            setVisible(false);
         } else {
-            setToggle('hide');
+            setVisible(true);
         }
     };
 
     let content = <button onClick={changeToggle} >Add New Expense</button>;
 
-    if (toggle === 'show') {
+    if (isVisible) {
         content = <ExpenseForm onChangeToggle={changeToggle} onSaveExpenseData={saveExpenseDataHandler} />
     }
 

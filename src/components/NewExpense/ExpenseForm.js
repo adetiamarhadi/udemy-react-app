@@ -37,8 +37,6 @@ const ExpenseForm = (props) => {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
-
-        resetHandler();
     };
 
     return (
